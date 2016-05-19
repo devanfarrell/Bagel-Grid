@@ -1,0 +1,76 @@
+@if ($bagel-gutter-using-percent)
+{
+  %push-span-all       { margin-left: (percentage(1/1) - $bagel-gutter-width); }
+
+  %push-one-half       { margin-left: (percentage(1/2) - $bagel-gutter-width); }
+
+  %push-one-third      { margin-left: (percentage(1/3) - $bagel-gutter-width); }
+  %push-two-thirds     { margin-left: (percentage(2/3) - $bagel-gutter-width); }
+
+  %push-one-quarter    { margin-left: (percentage(1/4) - $bagel-gutter-width); }
+  %push-two-quarters   { margin-left: (percentage(2/4) - $bagel-gutter-width); }
+  %push-three-quarters { margin-left: (percentage(3/4) - $bagel-gutter-width); }
+
+  %pull-span-all       { margin-left: -(percentage(1/1) + $bagel-gutter-width); }
+
+  %pull-one-half       { margin-left: -(percentage(1/2) + $bagel-gutter-width); }
+
+  %pull-one-third      { margin-left: -(percentage(1/3) + $bagel-gutter-width); }
+  %pull-two-thirds     { margin-left: -(percentage(2/3) + $bagel-gutter-width); }
+
+  %pull-one-quarter    { margin-left: -(percentage(1/4) + $bagel-gutter-width); }
+  %pull-two-quarters   { margin-left: -(percentage(2/4) + $bagel-gutter-width); }
+  %pull-three-quarters { margin-left: -(percentage(3/4) + $bagel-gutter-width); }
+
+  // For each of our column groups...
+  @each $group in $bagel-col-groups {
+    // For each column width from 1 to the column group...
+    @for $i from 1 through $group {
+      @if ($bagel-pushes) {
+        .#{$bagel-grid-column-namespace}--push-#{$i}-of-#{$group} {
+          @if percentage($i/$group) == percentage(1/1) {
+            @extend %push-span-all;
+          } @else if percentage($i/$group) == percentage(1/2) {
+            @extend %push-one-half;
+          } @else if percentage($i/$group) == percentage(1/3) {
+            @extend %push-one-third;
+          } @else if percentage($i/$group) == percentage(2/3) {
+            @extend %push-two-thirds;
+          } @else if percentage($i/$group) == percentage(1/4) {
+            @extend %push-one-quarter;
+          } @else if percentage($i/$group) == percentage(2/4) {
+            @extend %push-two-quarters;
+          } @else if percentage($i/$group) == percentage(3/4) {
+            @extend %push-three-quarters;
+          } @else {
+            margin-left: percentage($i/$group) - $bagel-gutter-width;
+          }
+        }
+      } // end pushes
+
+      @if ($bagel-pulls) {
+        .#{$bagel-grid-column-namespace}--pull-#{$i}-of-#{$group} {
+
+          @if percentage($i/$group) == percentage(1/1) {
+            @extend %pull-span-all;
+          } @else if percentage($i/$group) == percentage(1/2) {
+            @extend %pull-one-half;
+          } @else if percentage($i/$group) == percentage(1/3) {
+            @extend %pull-one-third;
+          } @else if percentage($i/$group) == percentage(2/3) {
+            @extend %pull-two-thirds;
+          } @else if percentage($i/$group) == percentage(1/4) {
+            @extend %pull-one-quarter;
+          } @else if percentage($i/$group) == percentage(2/4) {
+            @extend %pull-two-quarters;
+          } @else if percentage($i/$group) == percentage(3/4) {
+            @extend %pull-three-quarters;
+          } @else {
+            display: inline-block;
+            margin-left: -(percentage($i/$group) + $bagel-gutter-width);
+          }
+        }
+      }// end pulls
+    } // end @for
+  } // end @each
+} // end if
