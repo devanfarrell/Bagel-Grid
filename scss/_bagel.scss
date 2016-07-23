@@ -38,10 +38,11 @@ $bagel-wrapper-namespace: "bagel_wrapper" !default;
 
 //- Do you want a side of custom grid sizes to go with that?
 //- By default, the sizes included are 1, 2, 3, and 4
+$bagel-small-custom-grid: true !default;
 $bagel-medium-custom-grid: true !default;
 $bagel-large-custom-grid: true !default;
 //- $col-groups are the column groups you want for the custom grids
-$bagel-col-groups: (5, 12) !default;
+$bagel-col-groups: (8) !default;
 
 
 //- Gutter width accepts any unit
@@ -52,17 +53,16 @@ $bagel-gutter-using-percent: false !default;
 
 
 //- Breakpoints
-$bagel-breakpoint-large: 1280px !default;
-$bagel-breakpoint-medium: 700px !default;
-$bagel-breakpoint-small: 480px !default;
+$bagel-breakpoint-medium: 1000px !default;
+$bagel-breakpoint-small: 700px !default;
 
 
 //- Wrapper
 $bagel-wrapper: true !default;
 //- Wrapper sizes
-$bagel-wrapper-large: 1152px !default;
+$bagel-wrapper-large: 900px !default;
 $bagel-wrapper-medium: 90% !default;
-$bagel-wrapper-small: 100% !default;
+$bagel-wrapper-small: 98% !default;
 
 
 // Pushes and Pulls
@@ -70,8 +70,8 @@ $bagel-wrapper-small: 100% !default;
 //- If you're using anything but a % for the gutters the push and pull get a little weird but I don't believe it can be fixed without JS.
 //- In the gutters options, make sure to select false in the second option if you aren't using %.
 //- The percent version of them work because of extra math that can't be done in conjunction with any other type
-$bagel-pushes: true !default;
-$bagel-pulls: true !default;
+$bagel-pushes: false !default;
+$bagel-pulls: false !default;
 
 
 //-Extras
