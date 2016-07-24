@@ -14,7 +14,7 @@ It's intended to be mobile first. A column without a prefix will be treated the 
 
 If you want the column to be treated differently at different screen widths just include different classes to represent them.
 ```
-<div class="col col--1-of-2 col--m-1-of-4 col--m-2-of-12">
+<div class="col col--1-of-2 col--m-1-of-4 col--l-2-of-12">
   A half column in a small screen size,
   a quarter column in a medium screen size,
   and two twelfths in a large screen size
