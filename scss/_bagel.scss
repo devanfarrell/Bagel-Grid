@@ -1,55 +1,19 @@
-/*-----------------------------------*\
-  $bagel-grid
-
-  Usage
-  =====
-  Assuming default values:
-  <div class="bagel_wrapper">
-    <div class="grid">
-      <div class="col col--1-of-2">
-        A half-width column.
-      </div>
-      <div class="col col--1-of-4 col--pull-1-of-4">
-      A quarter column, pulled left by its own width.
-      <div class="col col--1-of-2 col--m-1-of-4 col--m-2-of-12">
-      A half column in a small screen size, a quarter column in a medium screen size, and two twelfths in a large screen size
-      </div>
-    </div>
-  </div>
-  Customization
-  =============
-  col--1-of-4 will apply to screen width sizes smaller than the small breakpoint
-  col--m-1-of-4 will apply to screen width sizes larger than the small breakpoint and smaller than the medium breakpoint
-  col--l-1-of-4 will apply to screen width sizes larger than the medium breakpoint
-  -If unpaired with another class the div will span the full width of the available space
-
-  $bagel-col-groups(n) adjusts column divisions.
-  For example, $bagel-col-groups(12) will produce
-  a 12-column grid. $col-groups(3,6,8)
-  will produce a 3-, 6-, and 8-column grid.
-\*-------------------------------------------------------------*/
-
-//- Namespaces
 //- Name your own classes!
 $bagel-grid-namespace: "grid" !default;
 $bagel-grid-column-namespace: "col" !default;
 $bagel-wrapper-namespace: "bagel_wrapper" !default;
-
 
 //- Do you want a side of custom grid sizes to go with that?
 //- By default, the sizes included are 1, 2, 3, and 4
 $bagel-small-custom-grid: true !default;
 $bagel-medium-custom-grid: true !default;
 $bagel-large-custom-grid: true !default;
-//- $col-groups are the column groups you want for the custom grids
-$bagel-col-groups: (8) !default;
+$bagel-col-groups: (3,4) !default; //- $col-groups are the column divisions you want in your custom grid
 
 
 //- Gutter width accepts any unit
-//- Make sure that the second option is on false if you aren't using percentages
-//- otherwise you'll get a compile error while using push or pulls
 $bagel-gutter-width: 20px !default;
-$bagel-gutter-using-percent: false !default;
+$bagel-gutter-using-percent: false !default; //- Make sure that this option is marked false if you aren't using percentages
 
 
 //- Breakpoints
@@ -59,7 +23,6 @@ $bagel-breakpoint-small: 700px !default;
 
 //- Wrapper
 $bagel-wrapper: true !default;
-//- Wrapper sizes
 $bagel-wrapper-large: 900px !default;
 $bagel-wrapper-medium: 90% !default;
 $bagel-wrapper-small: 98% !default;
