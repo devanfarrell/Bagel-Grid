@@ -16,7 +16,7 @@
   display: block;
   min-height: 1px;
   padding-left: 20px;
-  vertical-align: top;
+  vertical-align: middle;
   width: 100%; }
   .col[class*="col"] {
     margin-right: -.35em; }
@@ -102,10 +102,10 @@
   margin-left: auto;
   margin-right: auto; }
 
-.col--d-first {
+.col--display-first {
   float: left; }
 
-.col--d-last {
+.col--display-last {
   float: right; }
 
 .grid--no-gutter {
@@ -117,8 +117,8 @@
 .col--ab {
   vertical-align: bottom; }
 
-.col--am {
-  vertical-align: middle; }
+.col--at {
+  vertical-align: top; }
 
 .conditionalDisplay {
   display: none; }

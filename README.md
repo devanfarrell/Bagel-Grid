@@ -42,7 +42,7 @@ The `.bagel_wrapper` is Bagel's solution to maintaining a consistent page width 
 ## Extras
 
 
-Bagel has some extra modifiers to make different kinds of layouts easier. Most of them are borrowed completely from the Toast Framework and aren't fully functional yet.
+Bagel has some extra modifiers to make different kinds of layouts easier. Most of them are borrowed completely from the Toast Framework and aren't fully tested yet.
 ###### note: the push and pull for % gutter units seems fully functional at this time.
 
 ##### Not compiling? If you're not using the percentage unit in the gutters make sure that the option below the gutter is marked as `false`. The pushes and pulls are a little funky. The percent version of pushes and pulls work a little differently because of math that can't be done in conjunction with any other type

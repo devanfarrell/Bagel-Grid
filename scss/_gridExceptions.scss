@@ -7,12 +7,12 @@
   }
 
   // Displays the column as the first in its row
-  .#{$bagel-grid-column-namespace}--d-first {
+  .#{$bagel-grid-column-namespace}--display-first {
     float: left;
   }
 
   // Displays the column as the last in its row
-  .#{$bagel-grid-column-namespace}--d-last {
+  .#{$bagel-grid-column-namespace}--display-last {
     float: right;
   }
 
@@ -30,11 +30,12 @@
     vertical-align: bottom;
   }
 
-  // Align column to the middle.
-  .#{$bagel-grid-column-namespace}--am {
-    vertical-align: middle;
+  // Align column to the top.
+  .#{$bagel-grid-column-namespace}--at {
+    vertical-align: top;
   }
 
+// added conditional displays
   .conditionalDisplay {
     display: none;
   }

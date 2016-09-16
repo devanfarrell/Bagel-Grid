@@ -5,9 +5,8 @@
   display: block;
   min-height: 1px;
   padding-left: $bagel-gutter-width;
-  vertical-align: top;
+  vertical-align: middle;
   width: 100%;
-  //margin-right: -.25em;
 
   &[class*="#{$bagel-grid-column-namespace}"] {
     margin-right: -.35em;
