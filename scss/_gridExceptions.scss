@@ -6,7 +6,6 @@
     margin-right: auto;
   }
 
-
   // Displays the column as the first in its row
   .#{$bagel-grid-column-namespace}--d-first {
     float: left;
@@ -34,5 +33,24 @@
   // Align column to the middle.
   .#{$bagel-grid-column-namespace}--am {
     vertical-align: middle;
+  }
+
+  .conditionalDisplay {
+    display: none;
+  }
+  @media (min-width: $bagel-breakpoint-medium) {
+  .display--l{
+      display: inline-block;
+    }
+  }
+  @media (min-width: $bagel-breakpoint-small) and (max-width: $bagel-breakpoint-medium) {
+  .display--m{
+      display: inline-block;
+    }
+  }
+  @media (max-width: $bagel-breakpoint-small) {
+  .display--s{
+      display: inline-block;
+    }
   }
 }
