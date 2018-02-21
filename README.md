@@ -47,6 +47,6 @@ Bagel has some extra modifiers to make different kinds of layouts easier. Most o
 
 ##### Not compiling? If you're not using the percentage unit in the gutters make sure that the option below the gutter is marked as `false`. The pushes and pulls are a little funky. The percent version of pushes and pulls work a little differently because of math that can't be done in conjunction with any other type
 
-###### This project is heavily inspired by https://github.com/daneden/Toast. This code was written in desire of a more mobile first version of the code. Toast assumes the largest formate and lets you shrink div size appropriately and Bagel does the inverse.
+###### This project is heavily inspired by https://github.com/daneden/Toast. This code was written in desire of a more mobile first version of that grid. Toast assumes the largest screen size and lets you shrink div size as desired and Bagel does the inverse. Screen size is assumed to be mobile and larger screen sizes can have more content added to collumns as desired.
 
 That just about does it. Enjoy!
