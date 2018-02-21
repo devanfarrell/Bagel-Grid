@@ -37,7 +37,7 @@ The `.bagel_wrapper` is Bagel's solution to maintaining a consistent page width 
 ###### note: if you choose to use percentage and intend to use the push and pulls make sure to have `$bagel-gutter-using-percent` marked as `true`.
 
 
-`$bagel-breakpoint-medium` and `$toast-breakpoint-small` are breakpoint placeholders. Columns and the bagel wrapper have hooks to change their behavior under these breakpoints.
+`$bagel-breakpoint-medium` and `$bagel-breakpoint-small` are breakpoint placeholders. Columns and the bagel wrapper have hooks to change their behavior under these breakpoints.
 
 ## Extras
 
@@ -47,5 +47,6 @@ Bagel has some extra modifiers to make different kinds of layouts easier. Most o
 
 ##### Not compiling? If you're not using the percentage unit in the gutters make sure that the option below the gutter is marked as `false`. The pushes and pulls are a little funky. The percent version of pushes and pulls work a little differently because of math that can't be done in conjunction with any other type
 
+###### This project is heavily inspired by https://github.com/daneden/Toast. This code was written in desire of a more mobile first version of the code. Toast assumes the largest formate and lets you shrink div size appropriately and Bagel does the inverse.
 
 That just about does it. Enjoy!
