@@ -8,7 +8,7 @@ Unbelievable customization, change most everything: the number of columns, the g
 It's intended to be mobile first. A column without a prefix will be treated the same no matter how big or small.
 ```
 <div class="col col--1-of-4">
-  A half column on a small screen size
+  A fourth column on a all screen sizes
 </div>
 ```
 
